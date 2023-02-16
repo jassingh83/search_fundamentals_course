@@ -1,5 +1,72 @@
 {
   "settings": {
     "index.refresh_interval": "5s"
+  },
+  "mappings": {
+    "properties": {
+      "name" : {
+        "type" : "text",
+        "analyzer" : "english",
+        "fields" : {
+          "keyword" : {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "shortDescription" : {
+        "type" : "text",
+        "analyzer" : "english",
+        "fields" : {
+          "keyword" : {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "longDescription" : {
+        "type" : "text",
+        "analyzer" : "english",
+        "fields" : {
+          "keyword" : {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "regularPrice" : {
+        "type" : "float",
+        "fields" : {
+          "keyword" : {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "department" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "departmentId" : {
+        "type" : "keyword"
+      },
+      "image" : {
+        "type" : "keyword"
+      },
+      "salesRankShortTerm" : {
+        "type" : "integer"
+      },
+      "salesRankMediumTerm" : {
+        "type" : "integer"
+      },
+      "salesRankLongTerm" : {
+        "type" : "integer"
+      }
+    }
   }
 }
